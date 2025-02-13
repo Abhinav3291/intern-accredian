@@ -3,6 +3,7 @@ const router = express.Router();
 const { validationResult } = require('express-validator'); // Import validationResult
 
 const { PrismaClient } = require('@prisma/client');
+const sendMail = require('../service/mail.service');
 const prisma = new PrismaClient();
 
 
@@ -27,6 +28,10 @@ router.post('/', async (req, res) => {
         refereePhone: referee.phone,
       },
     });
+
+    sendMail(referrer.email, `You have successfully referred ${referee.email}`, "You Referred Successfully");
+    
+    sendMail(referee.email, `You have successfully referred by ${referrer.email}`, "Referred Successfully");
 
     res.status(201).json({ message: 'Referral created successfully', referral });
   } catch (error) {

@@ -4,8 +4,15 @@ const bodyParser = require('body-parser');
 const referralRoutes = require('./routes/referrals');
 const { PrismaClient } = require('@prisma/client');
 const { body, validationResult } = require('express-validator'); // For validation
+const cors = require('cors');
+
 
 const app = express();
+
+
+app.use(cors({
+  origin: '*' 
+}));
 
 app.use(bodyParser.json());
 
