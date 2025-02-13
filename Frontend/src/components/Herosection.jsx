@@ -25,7 +25,7 @@ const Herosection = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/api/referrals", { referrer, referee });
+      const response = await axios.post("https://intern-accredian-server.vercel.app/api/referrals", { referrer, referee });
       console.log("Referral submitted successfully:", response.data);
       handleClose();
       setReferrer({ name: "", email: "", phone: "" });
