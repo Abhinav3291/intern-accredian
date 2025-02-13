@@ -133,7 +133,7 @@ const Herosection = () => {
       </div>
       <div>
       <div className="hero-image" style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}> {/* Center the image */}
-        <img src="\public\Group 22035.png" alt="Hero" style={{ maxWidth: '100%' }} /> {/* Make image responsive */}
+        <img src="/Group 22035.png" alt="Hero" style={{ maxWidth: '100%' }} /> {/* Make image responsive */}
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' , padding: '20px' }}> {/* Center buttons */}
           <button onClick={() => setOpen(true)} style={{ 
@@ -157,7 +157,7 @@ const Herosection = () => {
         </div>
       {/* Image Section */}
       <div className="hero-image" style={{ marginTop: '20px', display: 'flex', justifyContent: 'center' }}> {/* Center the image */}
-        <img src="\public\Anniversary (7) 1.png" alt="Hero" style={{ maxWidth: '100%' }} /> {/* Make image responsive */}
+        <img src="/Anniversary (7) 1.png" alt="Hero" style={{ maxWidth: '100%' }} /> {/* Make image responsive */}
       </div>
       
     </section>
@@ -201,7 +201,7 @@ const Herosection = () => {
             fontSize: '2em'
           }}>
             <span className="material-symbols-outlined">
-              <img src="\public\Layer_2_00000166652077678251612620000003541000192939887504_.png" alt="" />
+              <img src="/Layer_2_00000166652077678251612620000003541000192939887504_.png" alt="" />
             </span>
           </div>
           <p style={{
@@ -229,7 +229,7 @@ const Herosection = () => {
             fontSize: '2em'
           }}>
             <span className="material-symbols-outlined">
-              <img src="\public\Vector.png" alt="" />
+              <img src="/Vector.png" alt="" />
             </span>
           </div>
           <p style={{
@@ -257,7 +257,7 @@ const Herosection = () => {
             fontSize: '2em'
           }}>
             <span className="material-symbols-outlined">
-              <img src="\public\Group 22036.png" alt="" />
+              <img src="/Group 22036.png" alt="" />
             </span>
             </div>
           <p style={{

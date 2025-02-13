@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Navbar.css';
-import logo from '/public/logo.png.png';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src='/logo.png' alt="Logo" className="logo-image" />
         </div>
         <div className="navbar-links">
           <div className="dropdown">

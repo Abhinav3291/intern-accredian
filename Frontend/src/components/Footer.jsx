@@ -20,7 +20,7 @@ const Footer = () => {
                 marginBottom: '20px' // Add some spacing below
             }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}> {/* Logo container */}
-                    <img src="\public\accredainnew.webp.png" alt="Accredian Logo" style={{ height: '40px' }} /> {/* Replace with your logo path and adjust height */}
+                    <img src="/accredainnew.webp.png" alt="Accredian Logo" style={{ height: '40px' }} /> {/* Replace with your logo path and adjust height */}
                     
                 </div>
 
