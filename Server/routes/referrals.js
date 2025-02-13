@@ -1,20 +1,23 @@
 const express = require('express');
-const { validationResult } = require('express-validator');
-
 const router = express.Router();
+const { validationResult } = require('express-validator'); // Import validationResult
+
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
 
 router.post('/', async (req, res) => {
-  // Validation result from the middleware
-  const errors = validationResult(req);
+  const errors = validationResult(req); // Check for validation errors
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+    return res.status(400).json({ errors: errors.array() }); // Respond with validation errors
   }
 
-  const { referrer, referee } = req.body;
-
   try {
-    // Create a new referral entry using Prisma
-    const newReferral = await req.prisma.referral.create({
+    const { referrer, referee } = req.body;
+
+    console.log(referee, referrer);
+
+    const referral = await req.prisma.referral.create({ // Use req.prisma
       data: {
         referrerName: referrer.name,
         referrerEmail: referrer.email,
@@ -25,11 +28,13 @@ router.post('/', async (req, res) => {
       },
     });
 
-    res.status(201).json(newReferral); // Return the created referral data
+    res.status(201).json({ message: 'Referral created successfully', referral });
   } catch (error) {
-    console.error('Error saving referral:', error);
-    res.status(500).send('Error saving referral');
+    console.error("Error saving referral:", error);
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 });
+
+
 
 module.exports = router;
