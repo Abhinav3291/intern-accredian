@@ -1,0 +1,134 @@
+/* Navbar.css */
+.navbar {
+    background-color: white ; /* Light gray background */
+    padding: 10px; /* Remove default padding */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack top bar and main nav */
+  }
+  
+  .top-bar {
+    background-color: white; /* Slightly darker top bar */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;
+  }
+  
+  .contact-expert {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Add padding to the main nav */
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    max-height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-link, .dropbtn {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    background: none; 
+    cursor: pointer;
+    
+  }
+  
+  .navbar-link:hover, .dropbtn:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .navbar-buttons {
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .navbar-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .login-button {
+    background-color: transparent; /* Transparent background */
+    color: #333;
+  }
+  
+  .signup-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+  }
+  
+  .signup-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  /* Navbar.css */
+/* ... (rest of your CSS) ... */
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content.show { /* The 'show' class makes it visible */
+    display: block;
+  }
+  
+  /* ... (rest of your CSS) ... */
