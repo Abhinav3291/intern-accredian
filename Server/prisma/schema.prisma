@@ -13,8 +13,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  name  String?
-  email String?  @unique
-  phone Int @unique
+model Referral {
+  id              Int    @id @default(autoincrement())
+  referrerName    String
+  referrerEmail   String
+  referrerPhone   String
+  refereeName     String
+  refereeEmail    String
+  refereePhone    String
 }
+
